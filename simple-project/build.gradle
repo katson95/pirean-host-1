@@ -40,10 +40,10 @@ dependencies {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "${nexusUrl}/content/repositories/releases") {
+            repository(url: "http://192.168.99.101:8083/repository/maven-releases/") {
                 authentication(userName: nexusUsername, password: nexusPassword)
             }
-            snapshotRepository(url: "${nexusUrl}/content/repositories/snapshots") {
+            snapshotRepository(url: "http://192.168.99.101:8083/repository/maven-snapshots/") {
                 authentication(userName: nexusUsername, password: nexusPassword)
             }
         }
